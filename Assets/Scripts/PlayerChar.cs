@@ -8,8 +8,10 @@ class PlayerChar : MonoBehaviour
 {
     [Header("Player")]
     //[SerializeField] private PlayerAnimation _playerAnim;
+    private int _jumpCount;
     private CharacterController _characterController;
-    private bool _isJumping;
+    private bool _canDash = true;
+    private float _dashCd = 1f;
     Vector3 _movementInput;
     Vector3 _direction;
 
@@ -18,7 +20,7 @@ class PlayerChar : MonoBehaviour
     [SerializeField] private float _speed = 5f;
     [SerializeField] private float _dashSpeed = 20;
     [SerializeField] private float _dashTime = 0.25f;
-    private float _gravity = -9.81f;
+    [SerializeField] private float _gravity = -9.81f;
     private float velocity;
 
     private void Start()
@@ -28,8 +30,10 @@ class PlayerChar : MonoBehaviour
 
     protected void FixedUpdate()
     {
+        if (_characterController.isGrounded) _jumpCount = 0;
         _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
         ApplyGravity();
+        print (velocity);
         Movement();
     }
 
@@ -50,10 +54,10 @@ class PlayerChar : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (_characterController.isGrounded)
+            if (_characterController.isGrounded || _jumpCount < 1)
             {
+                _jumpCount++;
                 velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
-                _isJumping = true;
             } 
         }
     }
@@ -62,7 +66,10 @@ class PlayerChar : MonoBehaviour
     {
         if (ctx.performed)
         {
+            if (_canDash == true)
+            {
             StartCoroutine(Dash());
+            }
         }
     }
 
@@ -70,12 +77,20 @@ class PlayerChar : MonoBehaviour
     {
         float dashTime = Time.time;
 
-        while (Time.time < dashTime)
+        while (Time.time < dashTime + _dashTime)
         {
             _characterController.Move(_direction * _dashSpeed * Time.deltaTime);
+            yield return null;
         }
-        print(_direction.x);
-        yield return null;
+
+        StartCoroutine(DashCooldown(_dashCd));
+    }
+
+    IEnumerator DashCooldown(float delay)
+    {
+        _canDash = false;
+        yield return new WaitForSeconds(delay);
+        _canDash = true;
     }
    
     //it's just the gravity 
@@ -85,6 +100,7 @@ class PlayerChar : MonoBehaviour
         {
 
             velocity += -1;
+            velocity = Mathf.Clamp(velocity, -0.1f , 100 );
         }
         else
         {
