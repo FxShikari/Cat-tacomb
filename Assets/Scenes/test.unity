@@ -588,6 +588,8 @@ MonoBehaviour:
   _jumpPower: 1
   _gravityMultiplier: 1
   _speed: 6
+  _dashSpeed: 20
+  _dashTime: 0.25
 --- !u!143 &1053795323
 CharacterController:
   m_ObjectHideFlags: 0
@@ -670,6 +672,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 42902d32-2845-4455-bcf9-a735a9513082
     m_ActionName: 'Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1053795322}
+        m_TargetAssemblyTypeName: PlayerChar, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ac3f18de-94e4-45e2-ac9c-4ff312f1aab2
+    m_ActionName: 'Player/Dash[/Keyboard/shift,/XInputControllerWindows/rightTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,8 @@ class PlayerChar : MonoBehaviour
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _gravityMultiplier = 3.0f;
     [SerializeField] private float _speed = 5f;
+    [SerializeField] private float _dashSpeed = 20;
+    [SerializeField] private float _dashTime = 0.25f;
     private float _gravity = -9.81f;
     private float velocity;
 
@@ -53,6 +56,26 @@ class PlayerChar : MonoBehaviour
                 _isJumping = true;
             } 
         }
+    }
+
+    public void OnDash(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
+    IEnumerator Dash()
+    {
+        float dashTime = Time.time;
+
+        while (Time.time < dashTime)
+        {
+            _characterController.Move(_direction * _dashSpeed * Time.deltaTime);
+        }
+        print(_direction.x);
+        yield return null;
     }
    
     //it's just the gravity 
