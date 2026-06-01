@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(CharacterController))]
-class PlayerChar : MonoBehaviour
+public class PlayerCharacter : MonoBehaviour
 {
     [Header("Player")]
     //[SerializeField] private PlayerAnimation _playerAnim;
