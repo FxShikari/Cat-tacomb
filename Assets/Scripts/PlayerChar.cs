@@ -32,9 +32,8 @@ class PlayerChar : MonoBehaviour
     {
         if (_characterController.isGrounded) _jumpCount = 0;
         _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
-        ApplyGravity();
-        print (velocity);
         Movement();
+        ApplyGravity();
     }
 
     private void Movement()
