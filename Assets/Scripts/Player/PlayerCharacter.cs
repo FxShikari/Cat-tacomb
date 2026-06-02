@@ -8,20 +8,26 @@ public class PlayerCharacter : MonoBehaviour
 {
     [Header("Player")]
     //[SerializeField] private PlayerAnimation _playerAnim;
-    private int _jumpCount;
+    [SerializeField] private int _jumpCount;
     private CharacterController _characterController;
     private bool _canDash = true;
+    private bool _canMove = true;
+    [SerializeField] private bool _isWalled = false;
     private float _dashCd = 1f;
     Vector3 _movementInput;
-    Vector3 _direction;
+    [SerializeField] Vector3 _direction;
 
+    [SerializeField] private LayerMask wallLayer;
     [SerializeField] private float _jumpPower;
-    [SerializeField] private float _gravityMultiplier = 3.0f;
-    [SerializeField] private float _speed = 5f;
-    [SerializeField] private float _dashSpeed = 20;
-    [SerializeField] private float _dashTime = 0.25f;
-    [SerializeField] private float _gravity = -9.81f;
+    [SerializeField] private float _gravityMultiplier;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _dashSpeed;
+    [SerializeField] private float _dashTime;
+    [SerializeField] private float _gravity;
+    [SerializeField] private float _wallGravity;
     private float velocity;
+
+    public bool canjump = true;
 
     private void Start()
     {
@@ -30,10 +36,57 @@ public class PlayerCharacter : MonoBehaviour
 
     protected void FixedUpdate()
     {
-        if (_characterController.isGrounded) _jumpCount = 0;
-        _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
+        // Character Control for movement
+        if (_characterController.isGrounded)
+        {
+            print("fiejfiejf plus aussi, pour faire plaisir à Clery");
+            _jumpCount = 0;
+            canjump = true;
+        }
+
+        //if(!_isWalled)
+        //{
+            if(_canMove)
+            {
+                _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
+            }
+            else
+            {
+                _direction = Vector3.zero + transform.up * velocity;
+            }
+        //}
+        //else
+        //{
+        //    _direction = transform.right * _movementInput.x + Vector3.zero  ;
+        //}
+
         Movement();
+        
+        // Checking for walls
+        WallCheck();
+
         ApplyGravity();
+        
+    }
+
+    private void WallCheck()
+    {
+        if (!_characterController.isGrounded)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, -transform.right, out hit, 1f, wallLayer))
+            {
+                _isWalled = true;
+            }
+            else
+            {
+                _isWalled = false;
+            }
+        }
+        else
+        {
+            
+        }
     }
 
     private void Movement()
@@ -57,7 +110,11 @@ public class PlayerCharacter : MonoBehaviour
             {
                 _jumpCount++;
                 velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
-            } 
+                if (_jumpCount >= 1)
+                {
+                    canjump = false;
+                }
+            }
         }
     }
 
@@ -67,7 +124,7 @@ public class PlayerCharacter : MonoBehaviour
         {
             if (_canDash == true)
             {
-            StartCoroutine(Dash());
+                StartCoroutine(Dash());
             }
         }
     }
@@ -75,10 +132,13 @@ public class PlayerCharacter : MonoBehaviour
     IEnumerator Dash()
     {
         float dashTime = Time.time;
+        Vector3 newDirection = _direction;
+
+        _canMove = false;
 
         while (Time.time < dashTime + _dashTime)
         {
-            _characterController.Move(_direction * _dashSpeed * Time.deltaTime);
+            _characterController.Move(newDirection * _dashSpeed * Time.deltaTime);
             yield return null;
         }
 
@@ -88,6 +148,7 @@ public class PlayerCharacter : MonoBehaviour
     IEnumerator DashCooldown(float delay)
     {
         _canDash = false;
+        _canMove = true;
         yield return new WaitForSeconds(delay);
         _canDash = true;
     }
@@ -95,16 +156,20 @@ public class PlayerCharacter : MonoBehaviour
     //it's just the gravity 
     private void ApplyGravity()
     {
-        if (_characterController.isGrounded)
-        {
-
-            velocity += -1;
-            velocity = Mathf.Clamp(velocity, -0.1f , 100 );
-        }
-        else
-        {
-            velocity += _gravity * _gravityMultiplier * Time.deltaTime;
-        }
+            if (_characterController.isGrounded)
+            {
+    
+                velocity += -1;
+                velocity = Mathf.Clamp(velocity, -0.1f , 100 );
+            }
+            else if (_isWalled)
+            {
+                velocity = _wallGravity * Time.deltaTime;
+            }
+            else
+            {
+                velocity += _gravity * _gravityMultiplier * Time.deltaTime;
+            }
 
         _direction.y = velocity;
     }
