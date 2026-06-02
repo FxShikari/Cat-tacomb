@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(CharacterController))]
@@ -39,7 +40,6 @@ public class PlayerCharacter : MonoBehaviour
         // Character Control for movement
         if (_characterController.isGrounded)
         {
-            print("fiejfiejf plus aussi, pour faire plaisir à Clery");
             _jumpCount = 0;
             canjump = true;
         }
@@ -69,13 +69,27 @@ public class PlayerCharacter : MonoBehaviour
         
     }
 
+    private void DisablePlayerInput(float time)
+    {
+        StartCoroutine(DisablePlayerInputRoutine(time));
+    }
+
+    IEnumerator DisablePlayerInputRoutine(float time)
+    {
+        _canMove = false;
+        yield return new WaitForSeconds(time);
+        _canMove = true;
+    }
+
     private void WallCheck()
     {
         if (!_characterController.isGrounded)
         {
+            Debug.DrawRay(transform.position, -transform.right.normalized * 1f, Color.red);
             RaycastHit hit;
             if (Physics.Raycast(transform.position, -transform.right, out hit, 1f, wallLayer))
             {
+                _jumpCount--;
                 _isWalled = true;
             }
             else
@@ -125,6 +139,7 @@ public class PlayerCharacter : MonoBehaviour
             if (_canDash == true)
             {
                 StartCoroutine(Dash());
+                DisablePlayerInput(_dashTime);
             }
         }
     }
@@ -134,7 +149,7 @@ public class PlayerCharacter : MonoBehaviour
         float dashTime = Time.time;
         Vector3 newDirection = _direction;
 
-        _canMove = false;
+        //_canMove = false;
 
         while (Time.time < dashTime + _dashTime)
         {
@@ -147,8 +162,8 @@ public class PlayerCharacter : MonoBehaviour
 
     IEnumerator DashCooldown(float delay)
     {
+        //_canMove = true;
         _canDash = false;
-        _canMove = true;
         yield return new WaitForSeconds(delay);
         _canDash = true;
     }
