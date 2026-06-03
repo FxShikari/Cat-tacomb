@@ -32,6 +32,8 @@ public class PlayerCharacter : MonoBehaviour
     private void Start()
     {
         _characterController = GetComponent<CharacterController>();
+
+        
     }
 
     protected void FixedUpdate()
