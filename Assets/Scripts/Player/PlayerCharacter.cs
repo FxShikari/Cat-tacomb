@@ -230,4 +230,12 @@ public class PlayerCharacter : MonoBehaviour
 
         _direction.y = velocity;
     }
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.layer == 8)
+        {
+            Debug.Log(gameObject.name);
+            hit.gameObject.GetComponent<FallingPlatformes>().fall();
+        }
+    }
 }
