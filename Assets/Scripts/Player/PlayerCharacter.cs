@@ -10,6 +10,7 @@ public class PlayerCharacter : MonoBehaviour
     [Header("Player")]
     //[SerializeField] private PlayerAnimation _playerAnim;
     private CharacterController _characterController;
+    [SerializeField] private Transform _characterBottom;
 
     [SerializeField] private int _jumpCount;
     private bool _canDash = true;
@@ -24,6 +25,7 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] Vector3 _direction;
 
     [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private LayerMask _enemyMask;
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _gravityMultiplier;
     [SerializeField] private float _speed;
@@ -38,7 +40,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         _characterController = GetComponent<CharacterController>();
 
-        
+
     }
 
     protected void FixedUpdate()
@@ -47,6 +49,10 @@ public class PlayerCharacter : MonoBehaviour
         if (_characterController.isGrounded)
         {
             _jumpCount = 0;
+        }
+        else
+        {
+            BottomCheck();
         }
 
 
@@ -120,6 +126,20 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
+    private void BottomCheck()
+    {
+        Collider[] ennemyAtBottom;
+        ennemyAtBottom = Physics.OverlapBox(new Vector3(0.2f, 0.2f), _characterBottom.position, Quaternion.identity, _enemyMask);
+        if (ennemyAtBottom != null)
+        {
+            if (ennemyAtBottom.Length != 0 && ennemyAtBottom[0] != null)
+            {
+                print(ennemyAtBottom[0].name);
+                velocity = Mathf.Sqrt((_jumpPower/2) * -2f * _gravity);
+            }
+        }
+    }
+
     private void Movement()
     {
         if (_direction.sqrMagnitude == 0) return;
@@ -189,13 +209,21 @@ public class PlayerCharacter : MonoBehaviour
     IEnumerator Dash()
     {
         float dashTime = Time.time;
-        Vector3 newDirection = _direction;
+        Vector3 dashDirection;
+        if (_facingRight)
+        {
+            dashDirection = transform.right;
+        }
+        else
+        {
+            dashDirection = -transform.right;
+        }
 
         //_canMove = false;
 
         while (Time.time < dashTime + _dashTime)
         {
-            _characterController.Move(newDirection * _dashSpeed * Time.deltaTime);
+            _characterController.Move(dashDirection * _dashSpeed * Time.deltaTime);
             yield return null;
         }
 
