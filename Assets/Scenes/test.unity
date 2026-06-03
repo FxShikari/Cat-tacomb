@@ -644,10 +644,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _jumpCount: 0
   _isWalled: 0
+  canWallJump: 1
   _direction: {x: 0, y: 0, z: 0}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   _jumpPower: 0.19
   _gravityMultiplier: 1
   _speed: 15
@@ -655,7 +656,6 @@ MonoBehaviour:
   _dashTime: 0.25
   _gravity: -3.5
   _wallGravity: -9.81
-  canjump: 1
 --- !u!143 &1053795323
 CharacterController:
   m_ObjectHideFlags: 0

@@ -9,13 +9,18 @@ public class PlayerCharacter : MonoBehaviour
 {
     [Header("Player")]
     //[SerializeField] private PlayerAnimation _playerAnim;
-    [SerializeField] private int _jumpCount;
     private CharacterController _characterController;
+
+    [SerializeField] private int _jumpCount;
     private bool _canDash = true;
     private bool _canMove = true;
     [SerializeField] private bool _isWalled = false;
-    private float _dashCd = 1f;
+    [SerializeField] private bool _canWallJump = true;
+    [SerializeField] float _characterDirection = 1f; // 1 = regarde à droite
+
+    private bool _facingRight = true;
     Vector3 _movementInput;
+    public float _nonPlayerMovementInput;
     [SerializeField] Vector3 _direction;
 
     [SerializeField] private LayerMask wallLayer;
@@ -28,7 +33,6 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private float _wallGravity;
     private float velocity;
 
-    public bool canjump = true;
 
     private void Start()
     {
@@ -41,32 +45,47 @@ public class PlayerCharacter : MonoBehaviour
         if (_characterController.isGrounded)
         {
             _jumpCount = 0;
-            canjump = true;
         }
 
-        //if(!_isWalled)
-        //{
-            if(_canMove)
+
+        if (_canMove)
+        {
+            _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
+            if (_movementInput.x > 0 && !_facingRight)
             {
-                _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
+                Flip();
             }
-            else
+            else if (_movementInput.x < 0 && _facingRight)
             {
-                _direction = Vector3.zero + transform.up * velocity;
+                Flip();
             }
-        //}
-        //else
-        //{
-        //    _direction = transform.right * _movementInput.x + Vector3.zero  ;
-        //}
+        }
+        else
+        {
+            _direction = transform.right * _nonPlayerMovementInput + Vector3.zero + transform.up * velocity;
+        }
 
         Movement();
-        
+
         // Checking for walls
-        WallCheck();
+        if (_canWallJump)
+        {
+            WallCheck();
+        }
 
         ApplyGravity();
-        
+
+    }
+
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing
+        _facingRight = !_facingRight;
+
+        // Multiply the player's x local scale by -1
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
     private void DisablePlayerInput(float time)
@@ -85,21 +104,17 @@ public class PlayerCharacter : MonoBehaviour
     {
         if (!_characterController.isGrounded)
         {
-            Debug.DrawRay(transform.position, -transform.right.normalized * 1f, Color.red);
+            Debug.DrawRay(transform.position, _movementInput.x * transform.right.normalized * 1f, Color.red);
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, -transform.right, out hit, 1f, wallLayer))
+            if (Physics.Raycast(transform.position, _movementInput.x * transform.right, out hit, 1f, wallLayer))
             {
-                _jumpCount--;
+                _jumpCount = 0;
                 _isWalled = true;
             }
             else
             {
                 _isWalled = false;
             }
-        }
-        else
-        {
-            
         }
     }
 
@@ -124,12 +139,40 @@ public class PlayerCharacter : MonoBehaviour
             {
                 _jumpCount++;
                 velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
-                if (_jumpCount >= 1)
+            }
+
+            if (_isWalled)
+            {
+                print("ça saute");
+                _isWalled = false;
+                Flip();
+                DisablePlayerInput(0.2f);
+                DisableWallJump();
+                velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
+                if (_facingRight)
                 {
-                    canjump = false;
+                    _nonPlayerMovementInput = 1f;
+                }
+                else
+                {
+                    _nonPlayerMovementInput = -1f;
                 }
             }
         }
+    }
+
+    private void DisableWallJump()
+    {
+        StartCoroutine(DisableWallJumpRoutine());
+    }
+
+    IEnumerator DisableWallJumpRoutine()
+    {
+        _canWallJump = false;
+        print("false");
+        yield return new WaitForSeconds(0.2f);
+        print("true");
+        _canWallJump = true;
     }
 
     public void OnDash(InputAction.CallbackContext ctx)
@@ -157,7 +200,7 @@ public class PlayerCharacter : MonoBehaviour
             yield return null;
         }
 
-        StartCoroutine(DashCooldown(_dashCd));
+        StartCoroutine(DashCooldown(_dashTime));
     }
 
     IEnumerator DashCooldown(float delay)
@@ -167,24 +210,24 @@ public class PlayerCharacter : MonoBehaviour
         yield return new WaitForSeconds(delay);
         _canDash = true;
     }
-   
+
     //it's just the gravity 
     private void ApplyGravity()
     {
-            if (_characterController.isGrounded)
-            {
-    
-                velocity += -1;
-                velocity = Mathf.Clamp(velocity, -0.1f , 100 );
-            }
-            else if (_isWalled)
-            {
-                velocity = _wallGravity * Time.deltaTime;
-            }
-            else
-            {
-                velocity += _gravity * _gravityMultiplier * Time.deltaTime;
-            }
+        if (_characterController.isGrounded)
+        {
+
+            velocity += -1;
+            velocity = Mathf.Clamp(velocity, -0.1f, 100);
+        }
+        else if (_isWalled)
+        {
+            velocity = _wallGravity * Time.deltaTime;
+        }
+        else
+        {
+            velocity += _gravity * _gravityMultiplier * Time.deltaTime;
+        }
 
         _direction.y = velocity;
     }
