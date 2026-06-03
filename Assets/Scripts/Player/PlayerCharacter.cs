@@ -143,7 +143,6 @@ public class PlayerCharacter : MonoBehaviour
 
             if (_isWalled)
             {
-                print("ça saute");
                 _isWalled = false;
                 Flip();
                 DisablePlayerInput(0.2f);
@@ -169,9 +168,7 @@ public class PlayerCharacter : MonoBehaviour
     IEnumerator DisableWallJumpRoutine()
     {
         _canWallJump = false;
-        print("false");
         yield return new WaitForSeconds(0.2f);
-        print("true");
         _canWallJump = true;
     }
 
