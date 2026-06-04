@@ -19,7 +19,8 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private bool _canWallJump = true;
     [SerializeField] float _characterDirection = 1f; // 1 = regarde à droite
 
-    private bool _facingRight = true;
+    [SerializeField] private bool _facingRight = true;
+    [SerializeField] private float _facingDirection = 1f;
     Vector3 _movementInput;
     public float _nonPlayerMovementInput;
     [SerializeField] Vector3 _direction;
@@ -45,20 +46,8 @@ public class PlayerCharacter : MonoBehaviour
 
     protected void FixedUpdate()
     {
-        // Character Control for movement
-        if (_characterController.isGrounded)
-        {
-            _jumpCount = 0;
-        }
-        else
-        {
-            BottomCheck();
-        }
-
-
         if (_canMove)
         {
-            _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
             if (_movementInput.x > 0 && !_facingRight)
             {
                 Flip();
@@ -67,10 +56,22 @@ public class PlayerCharacter : MonoBehaviour
             {
                 Flip();
             }
+            _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
         }
         else
         {
-            _direction = transform.right * _nonPlayerMovementInput + Vector3.zero + transform.up * velocity;
+            //_direction = transform.right * _nonPlayerMovementInput + Vector3.zero + transform.up * velocity;
+            _direction = transform.right * _facingDirection + Vector3.zero + transform.up * velocity;
+        }
+
+        // Character Control for movement
+        if (_characterController.isGrounded)
+        {
+            _jumpCount = 0;
+        }
+        else
+        {
+            BottomCheck();
         }
 
         Movement();
@@ -93,6 +94,7 @@ public class PlayerCharacter : MonoBehaviour
         // Multiply the player's x local scale by -1
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
+        _facingDirection *= -1;
         transform.localScale = theScale;
     }
 
@@ -128,16 +130,31 @@ public class PlayerCharacter : MonoBehaviour
 
     private void BottomCheck()
     {
-        Collider[] ennemyAtBottom;
-        ennemyAtBottom = Physics.OverlapBox(new Vector3(0.2f, 0.2f), _characterBottom.position, Quaternion.identity, _enemyMask);
+        Collider[] ennemyAtBottom = new Collider[16];
+        ennemyAtBottom = Physics.OverlapBox(_characterBottom.position, new Vector3(0.75f, 0.5f), Quaternion.identity, _enemyMask);//, _characterBottom.position, Quaternion.identity, _enemyMask);
+        print(ennemyAtBottom.Length);
+
+        //Debug.DrawRay(transform.position - new Vector3(0.05f, 0.05f), transform.right.normalized * 0.05f, Color.red);
+        //Debug.DrawRay(transform.position - new Vector3(0.05f, 0.05f), -transform.up * 0.05f, Color.red);
+
         if (ennemyAtBottom != null)
         {
             if (ennemyAtBottom.Length != 0 && ennemyAtBottom[0] != null)
             {
                 print(ennemyAtBottom[0].name);
+                Debug.DrawLine(_characterBottom.position, ennemyAtBottom[0].transform.position);
                 velocity = Mathf.Sqrt((_jumpPower/2) * -2f * _gravity);
             }
         }
+
+
+        ennemyAtBottom = null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(_characterBottom.position, new Vector3(0.75f, 0.25f));
     }
 
     private void Movement()
@@ -157,12 +174,6 @@ public class PlayerCharacter : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (_characterController.isGrounded || _jumpCount < 1)
-            {
-                _jumpCount++;
-                velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
-            }
-
             if (_isWalled)
             {
                 _isWalled = false;
@@ -170,15 +181,14 @@ public class PlayerCharacter : MonoBehaviour
                 DisablePlayerInput(0.2f);
                 DisableWallJump();
                 velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
-                if (_facingRight)
-                {
-                    _nonPlayerMovementInput = 1f;
-                }
-                else
-                {
-                    _nonPlayerMovementInput = -1f;
-                }
             }
+            else if (_characterController.isGrounded || _jumpCount < 1)
+            {
+                print("eeeeee");
+                _jumpCount++;
+                velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
+            }
+
         }
     }
 
@@ -209,21 +219,12 @@ public class PlayerCharacter : MonoBehaviour
     IEnumerator Dash()
     {
         float dashTime = Time.time;
-        Vector3 dashDirection;
-        if (_facingRight)
-        {
-            dashDirection = transform.right;
-        }
-        else
-        {
-            dashDirection = -transform.right;
-        }
 
         //_canMove = false;
 
         while (Time.time < dashTime + _dashTime)
         {
-            _characterController.Move(dashDirection * _dashSpeed * Time.deltaTime);
+            _characterController.Move(Vector3.right * _facingDirection * _dashSpeed * Time.deltaTime);
             yield return null;
         }
 
