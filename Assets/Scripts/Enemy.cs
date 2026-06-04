@@ -1,16 +1,34 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IAttackable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] Transform _pointA;
+    [SerializeField] Transform _pointB;
+    Transform _currentTarget;
+    public void GetAttacked(int damage)
     {
-        
+        // TODO Play Animation
+        enabled = false;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayhitFx(FX hitFx, Vector3 positionFx)
+    {
+
+    }
+
+    void IAttackable.GetAttacked()
+    {
+        // TODO Play Animation
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
+        print("skibidi");
+    }
+
+    private void FixedUpdate()
     {
         
     }
 }
+
+

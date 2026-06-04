@@ -141,9 +141,10 @@ public class PlayerCharacter : MonoBehaviour
         {
             if (ennemyAtBottom.Length != 0 && ennemyAtBottom[0] != null)
             {
-                print(ennemyAtBottom[0].name);
+                //print(ennemyAtBottom[0].name);
                 Debug.DrawLine(_characterBottom.position, ennemyAtBottom[0].transform.position);
                 velocity = Mathf.Sqrt((_jumpPower/2) * -2f * _gravity);
+                ennemyAtBottom[0].GetComponent<IAttackable>().GetAttacked();
             }
         }
 
