@@ -6,6 +6,7 @@ class FallingPlatformes :Interactable
     private Rigidbody _rb;
     [SerializeField] private Vector3 _pos;
 
+    [SerializeField] private float _delayBeforeFalling;
     [SerializeField] private float _fallingTilme;
     [SerializeField] private float _returnSpeed;
 
@@ -21,6 +22,12 @@ class FallingPlatformes :Interactable
 
     public override void Interation()
     {
+        StartCoroutine(Falling(_delayBeforeFalling));
+    }
+
+    IEnumerator Falling(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         _rb.useGravity = true;
         StartCoroutine(Cooldown(_fallingTilme));
     }
