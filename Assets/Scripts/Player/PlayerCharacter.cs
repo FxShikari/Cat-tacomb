@@ -131,7 +131,7 @@ public class PlayerCharacter : MonoBehaviour
     private void BottomCheck()
     {
         Collider[] ennemyAtBottom = new Collider[16];
-        ennemyAtBottom = Physics.OverlapBox(_characterBottom.position, new Vector3(0.75f, 0.5f), Quaternion.identity, _enemyMask);//, _characterBottom.position, Quaternion.identity, _enemyMask);
+        ennemyAtBottom = Physics.OverlapBox(_characterBottom.position, new Vector3(0.75f, 0.5f), Quaternion.identity, _enemyMask);
         print(ennemyAtBottom.Length);
 
         //Debug.DrawRay(transform.position - new Vector3(0.05f, 0.05f), transform.right.normalized * 0.05f, Color.red);
