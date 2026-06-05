@@ -169,14 +169,14 @@ public class PlayerCharacter : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx)
     {
         _movementInput = ctx.ReadValue<Vector2>();
-        if (ctx.performed)
-        {
-            _cameraTarget.transform.localPosition = _cameraTarget.transform.localPosition + (transform.right * 10) ;
-        }
-        else if (ctx.canceled)
-        {
-            _cameraTarget.transform.localPosition = Vector3.zero;
-        }
+        //if (ctx.performed)
+        //{
+        //    _cameraTarget.transform.position = _cameraTarget.transform.position + (_movementInput * 2) ;
+        //}
+        //else if (ctx.canceled)
+        //{
+        //    _cameraTarget.transform.localPosition = Vector3.zero;
+        //}
     }
 
     //Juuuuuump
