@@ -11,6 +11,7 @@ public class PlayerCharacter : MonoBehaviour
     //[SerializeField] private PlayerAnimation _playerAnim;
     private CharacterController _characterController;
     [SerializeField] private Transform _characterBottom;
+    [SerializeField] private Transform _cameraTarget;
 
     [SerializeField] private int _jumpCount;
     private bool _canDash = true;
@@ -168,6 +169,14 @@ public class PlayerCharacter : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx)
     {
         _movementInput = ctx.ReadValue<Vector2>();
+        if (ctx.performed)
+        {
+            _cameraTarget.transform.localPosition = _cameraTarget.transform.localPosition + (transform.right * 10) ;
+        }
+        else if (ctx.canceled)
+        {
+            _cameraTarget.transform.localPosition = Vector3.zero;
+        }
     }
 
     //Juuuuuump
