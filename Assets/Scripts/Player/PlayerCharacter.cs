@@ -12,6 +12,7 @@ public class PlayerCharacter : MonoBehaviour
     private CharacterController _characterController;
     [SerializeField] private Transform _characterBottom;
     [SerializeField] private Transform _cameraTarget;
+    [SerializeField] private Animator _animator;
 
     [SerializeField] private int _jumpCount;
     private bool _canDash = true;
@@ -107,6 +108,9 @@ public class PlayerCharacter : MonoBehaviour
         theScale.x *= -1;
         _facingDirection *= -1;
         transform.localScale = theScale;
+
+        _animator.SetBool("Running", false);
+        _animator.SetBool("Running", true);
     }
 
     private void DisablePlayerInput(float time)
@@ -179,14 +183,16 @@ public class PlayerCharacter : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx)
     {
         _movementInput = ctx.ReadValue<Vector2>();
-        //if (ctx.performed)
-        //{
-        //    _cameraTarget.transform.position = _cameraTarget.transform.position + (_movementInput * 2) ;
-        //}
-        //else if (ctx.canceled)
-        //{
-        //    _cameraTarget.transform.localPosition = Vector3.zero;
-        //}
+        if (ctx.performed)
+        {
+            //_cameraTarget.transform.position = _cameraTarget.transform.position + (_movementInput * 2);
+            _animator.SetBool("Running", true);
+        }
+        else if (ctx.canceled)
+        {
+            //_cameraTarget.transform.localPosition = Vector3.zero;
+            _animator.SetBool("Running", false);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

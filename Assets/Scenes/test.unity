@@ -129,8 +129,9 @@ GameObject:
   m_Component:
   - component: {fileID: 116078800}
   - component: {fileID: 116078801}
+  - component: {fileID: 116078802}
   m_Layer: 0
-  m_Name: sprit
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +147,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.15, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1053795325}
@@ -195,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 20dd5b8be8fb2e34eb53e3793407ec94, type: 3}
+  m_Sprite: {fileID: 182846114, guid: 637acc6c532e21d46861ed38586987a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -206,6 +207,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &116078802
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116078799}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80b2262e49dfc6a478282d13392fbaab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &230107648
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _checkPointList:
   - {fileID: 1109293090}
+  - {fileID: 1902793016}
   _currentTransformIndex: -1
 --- !u!4 &612108801
 Transform:
@@ -912,10 +936,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterBottom: {fileID: 533158533}
   _cameraTarget: {fileID: 1739496902}
+  _animator: {fileID: 116078802}
   _jumpCount: 0
   _isWalled: 0
   _canWallJump: 1
   _characterDirection: 1
+  _haveMovement: 1
   _facingRight: 1
   _facingDirection: 1
   _nonPlayerMovementInput: 1
@@ -1399,6 +1425,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1902793015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902793016}
+  m_Layer: 0
+  m_Name: Checkpoint Test 1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1902793016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902793015}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.55, y: 0.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071172047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,3 +1515,4 @@ SceneRoots:
   - {fileID: 2071172049}
   - {fileID: 612108801}
   - {fileID: 1109293090}
+  - {fileID: 1902793016}
