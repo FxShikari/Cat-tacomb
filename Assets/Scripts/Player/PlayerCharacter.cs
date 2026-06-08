@@ -19,6 +19,7 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private bool _isWalled = false;
     [SerializeField] private bool _canWallJump = true;
     [SerializeField] float _characterDirection = 1f; // 1 = regarde à droite
+    [SerializeField] bool _haveMovement = true;
 
     [SerializeField] private bool _facingRight = true;
     [SerializeField] private float _facingDirection = 1f;
@@ -42,11 +43,17 @@ public class PlayerCharacter : MonoBehaviour
     {
         _characterController = GetComponent<CharacterController>();
 
-
     }
 
     protected void FixedUpdate()
     {
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            ReturnToCheckpoint();
+        }
+
+#endif
         if (_canMove)
         {
             if (_movementInput.x > 0 && !_facingRight)
@@ -75,7 +82,10 @@ public class PlayerCharacter : MonoBehaviour
             BottomCheck();
         }
 
-        Movement();
+        if (_haveMovement)
+        {
+            Movement();
+        }
 
         // Checking for walls
         if (_canWallJump)
@@ -133,7 +143,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         Collider[] ennemyAtBottom = new Collider[16];
         ennemyAtBottom = Physics.OverlapBox(_characterBottom.position, new Vector3(0.75f, 0.5f), Quaternion.identity, _enemyMask);
-        print(ennemyAtBottom.Length);
+        //print(ennemyAtBottom.Length);
 
         //Debug.DrawRay(transform.position - new Vector3(0.05f, 0.05f), transform.right.normalized * 0.05f, Color.red);
         //Debug.DrawRay(transform.position - new Vector3(0.05f, 0.05f), -transform.up * 0.05f, Color.red);
@@ -144,7 +154,7 @@ public class PlayerCharacter : MonoBehaviour
             {
                 //print(ennemyAtBottom[0].name);
                 Debug.DrawLine(_characterBottom.position, ennemyAtBottom[0].transform.position);
-                velocity = Mathf.Sqrt((_jumpPower/2) * -2f * _gravity);
+                velocity = Mathf.Sqrt((_jumpPower / 2) * -2f * _gravity);
                 ennemyAtBottom[0].GetComponent<IAttackable>().GetAttacked();
             }
         }
@@ -179,6 +189,14 @@ public class PlayerCharacter : MonoBehaviour
         //}
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("DoDamage"))
+        {
+
+        }
+    }
+
     //Juuuuuump
     public void OnJump(InputAction.CallbackContext ctx)
     {
@@ -194,7 +212,6 @@ public class PlayerCharacter : MonoBehaviour
             }
             else if (_characterController.isGrounded || _jumpCount < 1)
             {
-                print("eeeeee");
                 _jumpCount++;
                 velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
             }
@@ -249,7 +266,30 @@ public class PlayerCharacter : MonoBehaviour
         _canDash = true;
     }
 
-    //it's just the gravity 
+    void StopAllMovement(float duration)
+    {
+        print("on va y aller peu par peu");
+        StartCoroutine(StopAllMovementRoutine(duration));
+    }
+
+    IEnumerator StopAllMovementRoutine(float duration)
+    {
+        _haveMovement = false;
+        print("fakse");
+        yield return new WaitForSeconds(duration);
+        print("true");
+        _haveMovement = true;
+    }
+
+    void ReturnToCheckpoint()
+    {
+        StopAllMovement(0.5f);
+        CheckpointManager.Instance.ReturnToLastCheckpoint();
+    }
+
+
+
+
     private void ApplyGravity()
     {
         if (_characterController.isGrounded)
