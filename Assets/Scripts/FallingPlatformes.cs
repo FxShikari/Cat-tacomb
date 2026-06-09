@@ -1,12 +1,12 @@
 using System.Collections;
 using UnityEngine;
 
-public class FallingPlatformes : MonoBehaviour
+class FallingPlatformes :Interactable
 {
     private Rigidbody _rb;
-    private Collider _col;
     [SerializeField] private Vector3 _pos;
 
+    [SerializeField] private float _delayBeforeFalling;
     [SerializeField] private float _fallingTilme;
     [SerializeField] private float _returnSpeed;
 
@@ -18,14 +18,18 @@ public class FallingPlatformes : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _col = GetComponent<Collider>();
     }
 
-    public void fall()
+    public override void Interation()
     {
-            _rb.useGravity = true;
-            //_col.enabled = false;
-            StartCoroutine(Cooldown(_fallingTilme));
+        StartCoroutine(Falling(_delayBeforeFalling));
+    }
+
+    IEnumerator Falling(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        _rb.useGravity = true;
+        StartCoroutine(Cooldown(_fallingTilme));
     }
 
     IEnumerator Reset()
@@ -42,6 +46,4 @@ public class FallingPlatformes : MonoBehaviour
         yield return new WaitForSeconds(delay);
         StartCoroutine(Reset());
     }
-
-    
 }
