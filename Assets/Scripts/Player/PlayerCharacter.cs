@@ -352,5 +352,16 @@ public class PlayerCharacter : MonoBehaviour
         //    Debug.Log(gameObject.name);
         //    hit.gameObject.GetComponent<Interactable>().Interation();
         //}
+
+        if (hit.gameObject.CompareTag("DoDamage"))
+        {
+            ExplodeCat();
+        }
+    }
+
+    void ExplodeCat()
+    {
+        // animation de mort du chat
+        ReturnToCheckpoint();
     }
 }
