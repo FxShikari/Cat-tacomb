@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 116078800}
   - component: {fileID: 116078801}
   - component: {fileID: 116078802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 533158533}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BottomCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,9 +776,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _checkPointList:
-  - {fileID: 1109293090}
-  - {fileID: 1902793016}
-  _currentTransformIndex: -1
+  - {fileID: 1109293092}
+  - {fileID: 1902793018}
+  _currentCheckpoint: {fileID: 0}
 --- !u!4 &612108801
 Transform:
   m_ObjectHideFlags: 0
@@ -914,8 +914,7 @@ GameObject:
   - component: {fileID: 1053795322}
   - component: {fileID: 1053795323}
   - component: {fileID: 1053795324}
-  - component: {fileID: 1053795326}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,29 +1079,6 @@ Transform:
   - {fileID: 1739496902}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1053795326
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053795321}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.3206358
-  m_Height: 1.8144112
-  m_Direction: 1
-  m_Center: {x: -0.0048475266, y: 1.037405, z: 0}
 --- !u!1 &1109293089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,6 +1088,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1109293090}
+  - component: {fileID: 1109293092}
+  - component: {fileID: 1109293091}
   m_Layer: 0
   m_Name: Checkpoint Test 1
   m_TagString: Untagged
@@ -1134,6 +1112,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1109293091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109293089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4.5831804, z: 1}
+  m_Center: {x: 0, y: 1.7915902, z: 0}
+--- !u!114 &1109293092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109293089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac4d13bb7a16de4ebe7c60f1e7e9d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 1109293090}
 --- !u!1 &1397655118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,7 +1294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1739496902}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1434,6 +1446,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1902793016}
+  - component: {fileID: 1902793018}
+  - component: {fileID: 1902793017}
   m_Layer: 0
   m_Name: Checkpoint Test 1 (1)
   m_TagString: Untagged
@@ -1456,6 +1470,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1902793017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902793015}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.7373414, z: 1}
+  m_Center: {x: 0, y: 0.8686707, z: 0}
+--- !u!114 &1902793018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902793015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac4d13bb7a16de4ebe7c60f1e7e9d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 1902793016}
 --- !u!1 &2071172047
 GameObject:
   m_ObjectHideFlags: 0

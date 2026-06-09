@@ -51,6 +51,7 @@ public class PlayerCharacter : MonoBehaviour
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.N))
         {
+            print("zebi");
             ReturnToCheckpoint();
         }
 
@@ -341,12 +342,15 @@ public class PlayerCharacter : MonoBehaviour
 
         _direction.y = velocity;
     }
+
+    // TODO
+    // Rajouter de la gélatine
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.layer == 9)
-        {
-            Debug.Log(gameObject.name);
-            hit.gameObject.GetComponent<Interactable>().Interation();
-        }
+        //if (hit.gameObject.layer == 69)
+        //{
+        //    Debug.Log(gameObject.name);
+        //    hit.gameObject.GetComponent<Interactable>().Interation();
+        //}
     }
 }
