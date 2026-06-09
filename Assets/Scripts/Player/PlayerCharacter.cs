@@ -73,7 +73,9 @@ public class PlayerCharacter : MonoBehaviour
             _direction = transform.right * _facingDirection + Vector3.zero + transform.up * velocity;
         }
 
+
         // animation
+        _animator.SetFloat("VelocityJump", velocity);
         if (_direction.x != 0)
         {
             _animator.SetBool("Running", true);
@@ -82,6 +84,9 @@ public class PlayerCharacter : MonoBehaviour
         {
             _animator.SetBool("Running", false);
         }
+
+        _animator.SetBool("Grounded", _characterController.isGrounded);
+
 
         // Character Control for movement
         if (_characterController.isGrounded)
@@ -107,6 +112,8 @@ public class PlayerCharacter : MonoBehaviour
         ApplyGravity();
 
     }
+
+
 
     private void Flip()
     {
@@ -229,11 +236,16 @@ public class PlayerCharacter : MonoBehaviour
                 DisablePlayerInput(0.2f);
                 DisableWallJump();
                 velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
+
+                _animator.SetTrigger("Jump");
+                _animator.SetBool("Walled", false);
             }
             else if (_characterController.isGrounded || _jumpCount < 1)
             {
                 _jumpCount++;
                 velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
+
+                _animator.SetTrigger("Jump");
             }
 
         }
