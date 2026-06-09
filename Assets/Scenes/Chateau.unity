@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: dd36acf2cc10b4342b438c174c8af017, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -335,11 +335,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28056070}
   m_Mesh: {fileID: -142266229853344905, guid: a80afe5c498b2a843b7afe39440350df, type: 3}
---- !u!4 &63568444 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4072624154645270640, guid: 84f30114aab3def4096fe16599176a4a, type: 3}
-  m_PrefabInstance: {fileID: 571904151}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &70902880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,7 +2466,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 63568444}
+    TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -2668,11 +2663,16 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 5114983871791687240, guid: 84f30114aab3def4096fe16599176a4a, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4072624154645270640, guid: 84f30114aab3def4096fe16599176a4a, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 736957726584996217, guid: 84f30114aab3def4096fe16599176a4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 812737572}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84f30114aab3def4096fe16599176a4a, type: 3}
+--- !u!4 &571904152 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 736957726584996217, guid: 84f30114aab3def4096fe16599176a4a, type: 3}
+  m_PrefabInstance: {fileID: 571904151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &574437615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3860,7 +3860,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 63568444}
+  m_Father: {fileID: 571904152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &812737573
 MeshRenderer:
