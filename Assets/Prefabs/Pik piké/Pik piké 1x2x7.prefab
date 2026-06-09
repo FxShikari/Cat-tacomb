@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5317633687399688100}
   - component: {fileID: 1225083807898201127}
   - component: {fileID: 3171196461704326786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,9 +96,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2257578548253322956}
   - component: {fileID: 6662005985614412490}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "Pik pik\xE9 1x2x7"
-  m_TagString: Untagged
+  m_TagString: DoDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 6657530222424191736}
   - component: {fileID: 1245053566847359967}
   - component: {fileID: 2611220397417353168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 3801251669646041584}
   - component: {fileID: 8532815609724308884}
   - component: {fileID: 2731028442823653835}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 4377852322172163215}
   - component: {fileID: 8438752469351604621}
   - component: {fileID: 2727844631604067493}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 699086768821090037}
   - component: {fileID: 9124904358094743231}
   - component: {fileID: 7907230411499849078}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 7701746748657252207}
   - component: {fileID: 1762062042878310952}
   - component: {fileID: 7179648423887005799}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 4701301529197976409}
   - component: {fileID: 6188743252669264405}
   - component: {fileID: 6879423966502704451}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 6955299536398909987}
   - component: {fileID: 5341666152117466998}
   - component: {fileID: 3487991712937981902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 9065742610972831159}
   - component: {fileID: 8126652857569889160}
   - component: {fileID: 1654779121749747300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 6015865791440792099}
   - component: {fileID: 2885408097313194612}
   - component: {fileID: 3934448765134855436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +981,7 @@ GameObject:
   - component: {fileID: 396435417703479321}
   - component: {fileID: 2648548066320467910}
   - component: {fileID: 129966664701133422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1067,7 +1067,7 @@ GameObject:
   - component: {fileID: 4193184289615238756}
   - component: {fileID: 8505415782888159272}
   - component: {fileID: 8465060902365558839}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1153,7 @@ GameObject:
   - component: {fileID: 5608196019272965667}
   - component: {fileID: 3364702197138274599}
   - component: {fileID: 3231527395479164405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 7902664478478937243}
   - component: {fileID: 2584139374436871324}
   - component: {fileID: 7298726581488091233}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1325,7 +1325,7 @@ GameObject:
   - component: {fileID: 3822110129658716105}
   - component: {fileID: 952444370311725406}
   - component: {fileID: 3156496927861176092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1411,7 +1411,7 @@ GameObject:
   - component: {fileID: 1429698705307924922}
   - component: {fileID: 3924462345344753141}
   - component: {fileID: 8479800231883116868}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1497,7 +1497,7 @@ GameObject:
   - component: {fileID: 4043837621684996041}
   - component: {fileID: 1068568073914474322}
   - component: {fileID: 2552331462625010458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1583,7 @@ GameObject:
   - component: {fileID: 9151410614623254137}
   - component: {fileID: 737195114510342778}
   - component: {fileID: 9172863440979957597}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1669,7 +1669,7 @@ GameObject:
   - component: {fileID: 2240698077660557937}
   - component: {fileID: 6825734562932543165}
   - component: {fileID: 7568456795123544113}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1755,7 +1755,7 @@ GameObject:
   - component: {fileID: 1359112254132609539}
   - component: {fileID: 4061183367850848876}
   - component: {fileID: 9086115250934270996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1841,7 +1841,7 @@ GameObject:
   - component: {fileID: 2199577709267247363}
   - component: {fileID: 8700352912127872261}
   - component: {fileID: 2775282168434888775}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1927,7 +1927,7 @@ GameObject:
   - component: {fileID: 1845459438788948285}
   - component: {fileID: 3679017705531833082}
   - component: {fileID: 2225540444433587718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2013,7 +2013,7 @@ GameObject:
   - component: {fileID: 69128424926964358}
   - component: {fileID: 5155790783036315383}
   - component: {fileID: 2556463577382379431}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2099,7 +2099,7 @@ GameObject:
   - component: {fileID: 5855290469831514165}
   - component: {fileID: 3457787527705344607}
   - component: {fileID: 8176382605862874754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2185,7 +2185,7 @@ GameObject:
   - component: {fileID: 990112021279426969}
   - component: {fileID: 278064645357625325}
   - component: {fileID: 4202783861773285365}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2271,7 +2271,7 @@ GameObject:
   - component: {fileID: 5361950615418773484}
   - component: {fileID: 3097568875799083967}
   - component: {fileID: 2083703911195309988}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2357,7 +2357,7 @@ GameObject:
   - component: {fileID: 6885881795707874779}
   - component: {fileID: 8121818472032438628}
   - component: {fileID: 6383712358151319469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2443,7 +2443,7 @@ GameObject:
   - component: {fileID: 4069779623131775600}
   - component: {fileID: 5587930864621644786}
   - component: {fileID: 700976999640312475}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2529,7 +2529,7 @@ GameObject:
   - component: {fileID: 4424336994691902958}
   - component: {fileID: 4259898713211657923}
   - component: {fileID: 4814240632350068339}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2615,7 +2615,7 @@ GameObject:
   - component: {fileID: 629854144315442007}
   - component: {fileID: 2530850573439614336}
   - component: {fileID: 7252678961841632942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2701,7 +2701,7 @@ GameObject:
   - component: {fileID: 3112053556315238242}
   - component: {fileID: 7726960284436344602}
   - component: {fileID: 2961700264867494604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2787,7 +2787,7 @@ GameObject:
   - component: {fileID: 8813143927424998263}
   - component: {fileID: 4685413489212617732}
   - component: {fileID: 8361658114198846293}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2873,7 +2873,7 @@ GameObject:
   - component: {fileID: 1440323762030954889}
   - component: {fileID: 7103188297071812496}
   - component: {fileID: 5214460968518209692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2959,7 +2959,7 @@ GameObject:
   - component: {fileID: 2187776952279502513}
   - component: {fileID: 8641232757320970441}
   - component: {fileID: 2553321789086935033}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3045,7 +3045,7 @@ GameObject:
   - component: {fileID: 5937738414844872091}
   - component: {fileID: 7078101953399257409}
   - component: {fileID: 4790902013838184438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3131,7 +3131,7 @@ GameObject:
   - component: {fileID: 6396092086534118179}
   - component: {fileID: 4192527862030405167}
   - component: {fileID: 7214366973122469802}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3217,7 +3217,7 @@ GameObject:
   - component: {fileID: 3569522796018377829}
   - component: {fileID: 3224929599273924695}
   - component: {fileID: 3197244988704889346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3303,7 +3303,7 @@ GameObject:
   - component: {fileID: 4956092131915199002}
   - component: {fileID: 1643315290717272187}
   - component: {fileID: 2668421867683605525}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3389,7 +3389,7 @@ GameObject:
   - component: {fileID: 5449490472955242916}
   - component: {fileID: 359282813292783226}
   - component: {fileID: 7243350065535507452}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3475,7 +3475,7 @@ GameObject:
   - component: {fileID: 1965736762544816125}
   - component: {fileID: 1225556971384636860}
   - component: {fileID: 6708884671291663449}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3561,7 +3561,7 @@ GameObject:
   - component: {fileID: 5337019358376367966}
   - component: {fileID: 5861913575047764477}
   - component: {fileID: 8478147759434450299}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3647,7 +3647,7 @@ GameObject:
   - component: {fileID: 5625850550808623576}
   - component: {fileID: 7147747491519467276}
   - component: {fileID: 8555286125527117969}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3733,7 +3733,7 @@ GameObject:
   - component: {fileID: 44076246066981375}
   - component: {fileID: 7258862277657352568}
   - component: {fileID: 3026282287005176421}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3819,7 +3819,7 @@ GameObject:
   - component: {fileID: 6683192089673797003}
   - component: {fileID: 3197925202477230415}
   - component: {fileID: 1750352515647217537}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3905,7 +3905,7 @@ GameObject:
   - component: {fileID: 6627316840035485687}
   - component: {fileID: 3710682172003641849}
   - component: {fileID: 2048628746650023096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3991,7 +3991,7 @@ GameObject:
   - component: {fileID: 2239776530873337261}
   - component: {fileID: 589844168091937763}
   - component: {fileID: 8832579965983152508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4077,7 +4077,7 @@ GameObject:
   - component: {fileID: 5737740562280837624}
   - component: {fileID: 4363427747502765498}
   - component: {fileID: 4031358480233489050}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4163,7 +4163,7 @@ GameObject:
   - component: {fileID: 5687394309143183819}
   - component: {fileID: 3545877859342265096}
   - component: {fileID: 7799529025377794694}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4249,7 +4249,7 @@ GameObject:
   - component: {fileID: 1590272506212738129}
   - component: {fileID: 5976677847831318054}
   - component: {fileID: 2352088193925931113}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4335,7 +4335,7 @@ GameObject:
   - component: {fileID: 8745363771166880566}
   - component: {fileID: 4687906801962592444}
   - component: {fileID: 64345080807402475}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4421,7 +4421,7 @@ GameObject:
   - component: {fileID: 8115752318039349719}
   - component: {fileID: 1338628746549097381}
   - component: {fileID: 6590282148061454186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4507,7 +4507,7 @@ GameObject:
   - component: {fileID: 7179551230876263807}
   - component: {fileID: 4680741210637619861}
   - component: {fileID: 3305192404207701219}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4593,7 +4593,7 @@ GameObject:
   - component: {fileID: 8273594466795074619}
   - component: {fileID: 7537113637294819849}
   - component: {fileID: 696291665536352374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4679,7 +4679,7 @@ GameObject:
   - component: {fileID: 4647336392790957635}
   - component: {fileID: 7529348667919843185}
   - component: {fileID: 1160050945940094646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4765,7 +4765,7 @@ GameObject:
   - component: {fileID: 3288036601551213879}
   - component: {fileID: 1535328786048586361}
   - component: {fileID: 6900113998769528637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4851,7 +4851,7 @@ GameObject:
   - component: {fileID: 8867289384297591933}
   - component: {fileID: 2746510944236913229}
   - component: {fileID: 9147118592662733274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_haut (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4937,7 +4937,7 @@ GameObject:
   - component: {fileID: 8944272520788790407}
   - component: {fileID: 5569844073708673775}
   - component: {fileID: 4964196388995506495}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: barreaux_casse_bas (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
