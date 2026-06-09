@@ -233,7 +233,7 @@ public class PlayerCharacter : MonoBehaviour
             {
                 _isWalled = false;
                 Flip();
-                DisablePlayerInput(0.2f);
+                DisablePlayerInput(0.1f);
                 DisableWallJump();
                 velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
 
