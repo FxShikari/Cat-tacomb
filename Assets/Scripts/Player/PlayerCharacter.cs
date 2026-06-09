@@ -73,6 +73,16 @@ public class PlayerCharacter : MonoBehaviour
             _direction = transform.right * _facingDirection + Vector3.zero + transform.up * velocity;
         }
 
+        // animation
+        if (_direction.x != 0)
+        {
+            _animator.SetBool("Running", true);
+        }
+        else
+        {
+            _animator.SetBool("Running", false);
+        }
+
         // Character Control for movement
         if (_characterController.isGrounded)
         {
@@ -135,10 +145,14 @@ public class PlayerCharacter : MonoBehaviour
             {
                 _jumpCount = 0;
                 _isWalled = true;
+
+                _animator.SetBool("Walled", true);
             }
             else
             {
                 _isWalled = false;
+
+                _animator.SetBool("Walled", false);
             }
         }
     }
@@ -186,12 +200,12 @@ public class PlayerCharacter : MonoBehaviour
         if (ctx.performed)
         {
             //_cameraTarget.transform.position = _cameraTarget.transform.position + (_movementInput * 2);
-            _animator.SetBool("Running", true);
+            //_animator.SetBool("Running", true);
         }
         else if (ctx.canceled)
         {
             //_cameraTarget.transform.localPosition = Vector3.zero;
-            _animator.SetBool("Running", false);
+            //_animator.SetBool("Running", false);
         }
     }
 

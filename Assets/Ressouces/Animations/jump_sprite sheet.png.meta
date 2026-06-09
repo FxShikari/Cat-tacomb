@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1ead6fcce0f4beb4ba9f8ff6167b911c
+guid: 15fa6bd4ac70f7446b405c553c2dbe85
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall jump_ sprite sheet_0
+      name: jump_sprite sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,14 +112,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89a6d6377db0341498988f485881d98a
-      internalID: -967735769
+      spriteID: 11223a2d72c44c34a8d9f42d7199ee84
+      internalID: -1474921393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall jump_ sprite sheet_1
+      name: jump_sprite sheet_1
       rect:
         serializedVersion: 2
         x: 512
@@ -134,14 +134,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ed978174335814fb214cb010598a5e
-      internalID: -22684932
+      spriteID: 7903ea1e60be62d40815aead3e75a3ce
+      internalID: -293257258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall jump_ sprite sheet_2
+      name: jump_sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4e8d80373504140a1405aac5a86725
+      internalID: -963261858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_sprite sheet_3
       rect:
         serializedVersion: 2
         x: 0
@@ -156,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 158190f6db6485e4d9a5bb95f58946a8
-      internalID: -1029500730
+      spriteID: 9437f0d20b0cc324f9d7fb97ffb31239
+      internalID: -1183867719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall jump_ sprite sheet_3
+      name: jump_sprite sheet_4
       rect:
         serializedVersion: 2
         x: 512
@@ -178,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f45918d9b0410884481f3d641aa0809c
-      internalID: 2034639325
+      spriteID: bd9e38bf253ff7548b703cf760d57712
+      internalID: -113262181
       vertices: []
       indices: 
       edges: []
@@ -188,7 +210,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0b7c80fd0daa16246bd1f09dd13f7691
+    spriteID: 93e6a8ba04199f34caf5b2caeabb2f55
     internalID: 0
     vertices: []
     indices: 
@@ -198,10 +220,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wall jump_ sprite sheet_0: -967735769
-      wall jump_ sprite sheet_1: -22684932
-      wall jump_ sprite sheet_2: -1029500730
-      wall jump_ sprite sheet_3: 2034639325
+      jump_sprite sheet_0: -1474921393
+      jump_sprite sheet_1: -293257258
+      jump_sprite sheet_2: -963261858
+      jump_sprite sheet_3: -1183867719
+      jump_sprite sheet_4: -113262181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
