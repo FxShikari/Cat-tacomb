@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/test.unity
     guid: 3c045c9e5d847fe4fb9be365a576ca52
+  - enabled: 1
+    path: Assets/Scenes/Chateau.unity
+    guid: 488a00eac3b08ad438d343a4832e6cf8
+  - enabled: 1
+    path: Assets/Scenes/Catacombe.unity
+    guid: bd85fac2ce939ce49b468fa98ec3109d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 5d357fa96ef2e0345a1e9e58bb0937d7, type: 3}
   m_UseUCBPForAssetBundles: 0
