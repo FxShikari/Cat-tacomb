@@ -343,7 +343,7 @@ public class PlayerCharacter : MonoBehaviour
     }
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.layer == 9)
+        if (hit.gameObject.layer == 10)
         {
             Debug.Log(gameObject.name);
             hit.gameObject.GetComponent<Interactable>().Interation();
