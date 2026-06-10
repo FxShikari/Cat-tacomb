@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/test.unity
     guid: 3c045c9e5d847fe4fb9be365a576ca52
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chateau.unity
     guid: 488a00eac3b08ad438d343a4832e6cf8
   - enabled: 1

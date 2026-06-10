@@ -1,11 +1,10 @@
-using UnityEditor;
 using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
-    public void ChargeScene(SceneAsset scene)
+    public void ChargeScene(string scene)
     {
         print("ok");
-        UnityEngine.SceneManagement.SceneManager.LoadScene(scene.name.ToString());
+        UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
     }
 }
