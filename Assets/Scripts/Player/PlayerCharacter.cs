@@ -347,11 +347,11 @@ public class PlayerCharacter : MonoBehaviour
     // Rajouter de la gélatine
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        //if (hit.gameObject.layer == 69)
-        //{
-        //    Debug.Log(gameObject.name);
-        //    hit.gameObject.GetComponent<Interactable>().Interation();
-        //}
+        if (hit.gameObject.layer.ToString() == "Interractable")
+        {
+            Debug.Log(gameObject.name);
+            hit.gameObject.GetComponent<Interactable>().Interation();
+        }
 
         if (hit.gameObject.CompareTag("DoDamage"))
         {
