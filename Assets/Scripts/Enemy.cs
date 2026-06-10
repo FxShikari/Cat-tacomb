@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IAttackable
@@ -9,20 +10,18 @@ public class Enemy : MonoBehaviour, IAttackable
     [SerializeField] private Transform _wallCheck;
     [SerializeField] private LayerMask _decorLayer;
 
+    [SerializeField] private bool _stunLocked = false;
+    IEnumerator stunlockRoutine;
+
 
     private void FixedUpdate()
     {
-        _characterController.Move(transform.right * transform.localScale.x * _speed * Time.deltaTime);
-
-        GroundCheck();
         WallCheck();
-    }
-
-    public void GetAttacked(int damage)
-    {
-        // TODO Play Animation
-        enabled = false;
-
+        GroundCheck();
+        if (!_stunLocked)
+        {
+            _characterController.Move(transform.right * transform.localScale.x * _speed * Time.deltaTime);
+        }
     }
 
     public void PlayhitFx(FX hitFx, Vector3 positionFx)
@@ -33,9 +32,21 @@ public class Enemy : MonoBehaviour, IAttackable
     void IAttackable.GetAttacked()
     {
         // TODO Play Animation
+        stunlockRoutine = StunLockRoutine();
+        if (!_stunLocked) StunLock(stunlockRoutine);
+    }
 
-        //Destroy(gameObject);
-        gameObject.SetActive(false);
+    void StunLock(IEnumerator routine)
+    {
+        StopCoroutine(routine);
+        StartCoroutine(routine);
+    }
+
+    IEnumerator StunLockRoutine()
+    {
+        _stunLocked = true;
+        yield return new WaitForSeconds(1.5f);
+        _stunLocked = false;
     }
 
     void GroundCheck()
