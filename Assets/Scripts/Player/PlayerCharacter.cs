@@ -93,6 +93,8 @@ public class PlayerCharacter : MonoBehaviour
         if (_characterController.isGrounded)
         {
             _jumpCount = 0;
+            _isWalled = false;
+            _animator.SetBool("Walled", false);
         }
         else
         {
@@ -301,16 +303,13 @@ public class PlayerCharacter : MonoBehaviour
 
     void StopAllMovement(float duration)
     {
-        print("on va y aller peu par peu");
         StartCoroutine(StopAllMovementRoutine(duration));
     }
 
     IEnumerator StopAllMovementRoutine(float duration)
     {
         _haveMovement = false;
-        print("fakse");
         yield return new WaitForSeconds(duration);
-        print("true");
         _haveMovement = true;
     }
 
@@ -353,13 +352,13 @@ public class PlayerCharacter : MonoBehaviour
             hit.gameObject.GetComponent<Interactable>().Interation();
         }
 
-        if (hit.gameObject.CompareTag("DoDamage"))
-        {
-            ExplodeCat();
-        }
+        //if (hit.gameObject.CompareTag("DoDamage"))
+        //{
+        //    ExplodeCat();
+        //}
     }
 
-    void ExplodeCat()
+    public void ExplodeCat()
     {
         // animation de mort du chat
         ReturnToCheckpoint();
