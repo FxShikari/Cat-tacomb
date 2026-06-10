@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6164825480460766438}
   - component: {fileID: 5685178095676983466}
   - component: {fileID: 7683586840803138336}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneManager: {fileID: 0}
-  _sceneToCharge: {fileID: 102900000, guid: bd85fac2ce939ce49b468fa98ec3109d, type: 3}
+  _sceneToCharge: 
 --- !u!65 &7683586840803138336
 BoxCollider:
   m_ObjectHideFlags: 0
