@@ -1,11 +1,10 @@
-using UnityEditor;
 using UnityEngine;
 
 class Exit : Interactable
 {
     [SerializeField] private SceneManager _sceneManager;
 
-    [SerializeField] private SceneAsset _sceneToCharge;
+    [SerializeField] private string _sceneToCharge;
 
     private void Awake()
     {
