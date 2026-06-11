@@ -3,7 +3,17 @@ guid: 23adcbcea8cc51448be1f46375467d38
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: oil
+    second: {fileID: 2100000, guid: 289b4e835406a0b40a983715f166c1cd, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: oil-6-1x
+    second: {fileID: 2800000, guid: 3275fb25e3376ab4ea386c6107e7de32, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
