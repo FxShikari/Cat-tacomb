@@ -6,7 +6,7 @@ public class PlayerDamageCheck : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("eee");
+        print("eee trigger");
         if (other.gameObject.CompareTag("DoDamage"))
         {
             character.ExplodeCat();
@@ -16,20 +16,20 @@ public class PlayerDamageCheck : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        print("ekke");
+        print("ekke trigger");
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("eee");
+        print("eee collide");
         if (collision.gameObject.CompareTag("DoDamage"))
         {
+            print("zobi");
             character.ExplodeCat();
         }
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        print("ekke");
-    }
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //}
 }

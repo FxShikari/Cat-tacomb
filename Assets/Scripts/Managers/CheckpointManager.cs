@@ -44,7 +44,6 @@ public class CheckpointManager : MonoBehaviour
 
     public void UpdateCheckpoint(CheckPoint checkPoint)
     {
-        print(checkPoint.name);
         _currentCheckpoint = checkPoint;
     }
 }

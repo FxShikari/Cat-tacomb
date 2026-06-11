@@ -117,6 +117,16 @@ public class PlayerCharacter : MonoBehaviour
     }
 
 
+    public void DisableMovement()
+    {
+        _haveMovement = false;
+    }
+
+    public void EnableMovement()
+    {
+        _haveMovement = true;
+    }
+
 
     private void Flip()
     {
@@ -313,7 +323,7 @@ public class PlayerCharacter : MonoBehaviour
         _haveMovement = true;
     }
 
-    void ReturnToCheckpoint()
+    public void ReturnToCheckpoint()
     {
         StopAllMovement(0.5f);
         CheckpointManager.Instance.ReturnToLastCheckpoint();
@@ -342,8 +352,6 @@ public class PlayerCharacter : MonoBehaviour
         _direction.y = velocity;
     }
 
-    // TODO
-    // Rajouter de la gélatine
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.layer.ToString() == "Interractable")
@@ -360,7 +368,15 @@ public class PlayerCharacter : MonoBehaviour
 
     public void ExplodeCat()
     {
+        _animator.SetTrigger("Explosion");
+    }
+
+    IEnumerator ExplosionRoutine()
+    {
         // animation de mort du chat
+        _animator.SetTrigger("Explosion");
+        _canMove = false;
+        yield return new WaitForSeconds(1.5f);
         ReturnToCheckpoint();
     }
 }
