@@ -355,7 +355,7 @@ public class PlayerCharacter : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.layer.ToString() == "Interractable")
+        if (hit.gameObject.layer == 11)
         {
             Debug.Log(gameObject.name);
             hit.gameObject.GetComponent<Interactable>().Interation();

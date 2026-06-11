@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2257578548253322956}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: "Pik pik\xE9 3x2x7"
   m_TagString: DoDamage
   m_Icon: {fileID: 0}
