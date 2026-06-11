@@ -93,6 +93,8 @@ public class PlayerCharacter : MonoBehaviour
         if (_characterController.isGrounded)
         {
             _jumpCount = 0;
+            _isWalled = false;
+            _animator.SetBool("Walled", false);
         }
         else
         {
@@ -114,6 +116,16 @@ public class PlayerCharacter : MonoBehaviour
 
     }
 
+
+    public void DisableMovement()
+    {
+        _haveMovement = false;
+    }
+
+    public void EnableMovement()
+    {
+        _haveMovement = true;
+    }
 
 
     private void Flip()
@@ -155,6 +167,7 @@ public class PlayerCharacter : MonoBehaviour
                 _isWalled = true;
 
                 _animator.SetBool("Walled", true);
+                _animator.SetBool("Dashing", false);
             }
             else
             {
@@ -280,7 +293,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         float dashTime = Time.time;
 
-        //_canMove = false;
+        _animator.SetBool("Dashing", true);
 
         while (Time.time < dashTime + _dashTime)
         {
@@ -293,7 +306,7 @@ public class PlayerCharacter : MonoBehaviour
 
     IEnumerator DashCooldown(float delay)
     {
-        //_canMove = true;
+        _animator.SetBool("Dashing", false);
         _canDash = false;
         yield return new WaitForSeconds(delay);
         _canDash = true;
@@ -301,20 +314,17 @@ public class PlayerCharacter : MonoBehaviour
 
     void StopAllMovement(float duration)
     {
-        print("on va y aller peu par peu");
         StartCoroutine(StopAllMovementRoutine(duration));
     }
 
     IEnumerator StopAllMovementRoutine(float duration)
     {
         _haveMovement = false;
-        print("fakse");
         yield return new WaitForSeconds(duration);
-        print("true");
         _haveMovement = true;
     }
 
-    void ReturnToCheckpoint()
+    public void ReturnToCheckpoint()
     {
         StopAllMovement(0.5f);
         CheckpointManager.Instance.ReturnToLastCheckpoint();
@@ -343,8 +353,6 @@ public class PlayerCharacter : MonoBehaviour
         _direction.y = velocity;
     }
 
-    // TODO
-    // Rajouter de la gélatine
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.layer.ToString() == "Interractable")
@@ -353,15 +361,23 @@ public class PlayerCharacter : MonoBehaviour
             hit.gameObject.GetComponent<Interactable>().Interation();
         }
 
-        if (hit.gameObject.CompareTag("DoDamage"))
-        {
-            ExplodeCat();
-        }
+        //if (hit.gameObject.CompareTag("DoDamage"))
+        //{
+        //    ExplodeCat();
+        //}
     }
 
-    void ExplodeCat()
+    public void ExplodeCat()
+    {
+        _animator.SetTrigger("Explosion");
+    }
+
+    IEnumerator ExplosionRoutine()
     {
         // animation de mort du chat
+        _animator.SetTrigger("Explosion");
+        _canMove = false;
+        yield return new WaitForSeconds(1.5f);
         ReturnToCheckpoint();
     }
 }

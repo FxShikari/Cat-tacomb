@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 38b88db1cd7d49548b87be3d7d3f4a1b
+guid: dfb4e3aa9a8641f499ffebb8b03e9f2c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,12 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MORT_Sprite sheet_0
+      name: Pic_Bleu_sprite sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 1536
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -112,19 +112,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9e83c2286334164e8dcf5bef7f8c70f
-      internalID: -1182442573
+      spriteID: b0fff4ae1f99b264da1872ab850bd9af
+      internalID: 688958231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_1
+      name: Pic_Bleu_sprite sheet_1
       rect:
         serializedVersion: 2
-        x: 512
+        x: 384
         y: 1536
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -134,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fe5e85f58049c7468c738ecd61513f6
-      internalID: 1167032200
+      spriteID: c8d54f7e999424c4c90217c11dc32296
+      internalID: 284558184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_2
+      name: Pic_Bleu_sprite sheet_2
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 768
         y: 1536
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,19 +156,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63703ada78665c8488a7f65c192bc772
-      internalID: -1143074024
+      spriteID: e3189b8989c2ab6458d2f5cb03d4e79f
+      internalID: 1839542647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_3
+      name: Pic_Bleu_sprite sheet_3
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1152
         y: 1536
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -178,41 +178,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99e5a15c5c396c646b28b9b663000ce8
-      internalID: -886249592
+      spriteID: fa4e9d3861fa6d34f89c55dac5bcdf49
+      internalID: 219384506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_4
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 1536
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d119164d9a8c4594c80c2aad75471c0e
-      internalID: -299855173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MORT_Sprite sheet_5
+      name: Pic_Bleu_sprite sheet_4
       rect:
         serializedVersion: 2
         x: 0
         y: 1024
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -222,19 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06dee87f51cb2214b899d73f1b12e6ef
-      internalID: 1574116227
+      spriteID: d08bee4af43f9bc4dbde823c3a413b64
+      internalID: 1656757076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_6
+      name: Pic_Bleu_sprite sheet_5
       rect:
         serializedVersion: 2
-        x: 512
+        x: 384
         y: 1024
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -244,19 +222,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40f81691de5848949a94c279eb7b79f1
-      internalID: 1501450882
+      spriteID: 03a7c2c23106cc44e8d3a6c6307c15c8
+      internalID: -68148490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_7
+      name: Pic_Bleu_sprite sheet_6
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 768
         y: 1024
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -266,19 +244,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ab9390bbe275894a812e0396cee3691
-      internalID: -320195641
+      spriteID: 8f8e580200417df4a9ede320bcc57b53
+      internalID: 1350055281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_8
+      name: Pic_Bleu_sprite sheet_7
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1152
         y: 1024
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -288,41 +266,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fb0eac320b403742bbdb54c1f4e14aa
-      internalID: -983316912
+      spriteID: e3f4bee5d8a79324fb56cd9cfe072b9e
+      internalID: 80740031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_9
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85f2c9fb3580219438d0580a910d9324
-      internalID: -449517531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MORT_Sprite sheet_10
+      name: Pic_Bleu_sprite sheet_8
       rect:
         serializedVersion: 2
         x: 0
         y: 512
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -332,19 +288,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecd67ec621852df47be20fc6447f5c82
-      internalID: 120195715
+      spriteID: a40be3fd4e54e0442bfbab6efa3adda0
+      internalID: 892515075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_11
+      name: Pic_Bleu_sprite sheet_9
       rect:
         serializedVersion: 2
-        x: 512
+        x: 384
         y: 512
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -354,19 +310,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07a0d70ce8b9f5d45a5df9ea905c94b7
-      internalID: -980832978
+      spriteID: ce7ed26c49061cd43a4a0f6dee1a822d
+      internalID: -814099327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_12
+      name: Pic_Bleu_sprite sheet_10
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 768
         y: 512
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -376,19 +332,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c8cfab436c327d4ba6e898a017137b6
-      internalID: 1478450820
+      spriteID: 0e72324300b1a79478422db5e6e5af1f
+      internalID: -218957099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_13
+      name: Pic_Bleu_sprite sheet_11
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1152
         y: 512
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -398,41 +354,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5345a9fa305df914aa9ace3415fa332e
-      internalID: -207550991
+      spriteID: 7c77b5aef5b617744a8d4c4e11ed3be3
+      internalID: 1621554433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_14
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fa169ea1d6c3554f85e947083cdb24f
-      internalID: 1345910593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MORT_Sprite sheet_15
+      name: Pic_Bleu_sprite sheet_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -442,19 +376,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b92fff55434672c4b93be70c81c0ef2f
-      internalID: 392275964
+      spriteID: f9310bc78487c744aac417a128f02693
+      internalID: 733271475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MORT_Sprite sheet_16
+      name: Pic_Bleu_sprite sheet_13
       rect:
         serializedVersion: 2
-        x: 512
+        x: 384
         y: 0
-        width: 512
+        width: 384
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -464,8 +398,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1905e219e51f3ff45b30361f99d7429c
-      internalID: 1682865395
+      spriteID: 3c7ad040f1346124f93a5103828c6500
+      internalID: 1819331699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pic_Bleu_sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdee7896b76ff8844b54615bec560be0
+      internalID: -806330211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pic_Bleu_sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49efb14a68892aa4fb2e112103b6b79f
+      internalID: 20192465
       vertices: []
       indices: 
       edges: []
@@ -474,7 +452,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0c551fa5c749a844bbf5edc8121b3b4b
+    spriteID: 918395fc6bbba084f9366f356549499a
     internalID: 0
     vertices: []
     indices: 
@@ -484,23 +462,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MORT_Sprite sheet_0: -1182442573
-      MORT_Sprite sheet_1: 1167032200
-      MORT_Sprite sheet_10: 120195715
-      MORT_Sprite sheet_11: -980832978
-      MORT_Sprite sheet_12: 1478450820
-      MORT_Sprite sheet_13: -207550991
-      MORT_Sprite sheet_14: 1345910593
-      MORT_Sprite sheet_15: 392275964
-      MORT_Sprite sheet_16: 1682865395
-      MORT_Sprite sheet_2: -1143074024
-      MORT_Sprite sheet_3: -886249592
-      MORT_Sprite sheet_4: -299855173
-      MORT_Sprite sheet_5: 1574116227
-      MORT_Sprite sheet_6: 1501450882
-      MORT_Sprite sheet_7: -320195641
-      MORT_Sprite sheet_8: -983316912
-      MORT_Sprite sheet_9: -449517531
+      Pic_Bleu_sprite sheet_0: 688958231
+      Pic_Bleu_sprite sheet_1: 284558184
+      Pic_Bleu_sprite sheet_10: -218957099
+      Pic_Bleu_sprite sheet_11: 1621554433
+      Pic_Bleu_sprite sheet_12: 733271475
+      Pic_Bleu_sprite sheet_13: 1819331699
+      Pic_Bleu_sprite sheet_14: -806330211
+      Pic_Bleu_sprite sheet_15: 20192465
+      Pic_Bleu_sprite sheet_2: 1839542647
+      Pic_Bleu_sprite sheet_3: 219384506
+      Pic_Bleu_sprite sheet_4: 1656757076
+      Pic_Bleu_sprite sheet_5: -68148490
+      Pic_Bleu_sprite sheet_6: 1350055281
+      Pic_Bleu_sprite sheet_7: 80740031
+      Pic_Bleu_sprite sheet_8: 892515075
+      Pic_Bleu_sprite sheet_9: -814099327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

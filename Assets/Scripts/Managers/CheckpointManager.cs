@@ -37,7 +37,7 @@ public class CheckpointManager : MonoBehaviour
 
     public void ReturnToLastCheckpoint()
     {
-        print(_currentCheckpoint.GetIndex());
+        //print(_currentCheckpoint.GetIndex());
         _player.transform.position = _currentCheckpoint.GetSpawnPoint().position;
     }
 
