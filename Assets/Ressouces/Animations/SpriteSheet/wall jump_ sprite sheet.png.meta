@@ -100,12 +100,12 @@ TextureImporter:
       name: wall jump_ sprite sheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 82
         y: 512
-        width: 512
+        width: 440
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -122,12 +122,12 @@ TextureImporter:
       name: wall jump_ sprite sheet_1
       rect:
         serializedVersion: 2
-        x: 512
+        x: 594
         y: 512
-        width: 512
+        width: 430
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: wall jump_ sprite sheet_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 82
         y: 0
-        width: 512
+        width: 440
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: wall jump_ sprite sheet_3
       rect:
         serializedVersion: 2
-        x: 512
+        x: 594
         y: 0
-        width: 512
+        width: 430
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
