@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/test.unity
     guid: 3c045c9e5d847fe4fb9be365a576ca52
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: f9096ec07726c5e499b914fd38eb36b1
+  - enabled: 1
     path: Assets/Scenes/Chateau.unity
     guid: 488a00eac3b08ad438d343a4832e6cf8
   - enabled: 1

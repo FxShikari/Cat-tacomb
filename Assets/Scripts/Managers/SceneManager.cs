@@ -7,4 +7,15 @@ public class SceneManager : MonoBehaviour
         print("ok");
         UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
     }
+
+    public void StartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Chateau");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    
 }
