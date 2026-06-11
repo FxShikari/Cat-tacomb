@@ -167,6 +167,7 @@ public class PlayerCharacter : MonoBehaviour
                 _isWalled = true;
 
                 _animator.SetBool("Walled", true);
+                _animator.SetBool("Dashing", false);
             }
             else
             {
@@ -292,7 +293,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         float dashTime = Time.time;
 
-        //_canMove = false;
+        _animator.SetBool("Dashing", true);
 
         while (Time.time < dashTime + _dashTime)
         {
@@ -305,7 +306,7 @@ public class PlayerCharacter : MonoBehaviour
 
     IEnumerator DashCooldown(float delay)
     {
-        //_canMove = true;
+        _animator.SetBool("Dashing", false);
         _canDash = false;
         yield return new WaitForSeconds(delay);
         _canDash = true;
