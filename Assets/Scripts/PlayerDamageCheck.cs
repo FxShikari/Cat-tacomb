@@ -25,8 +25,4 @@ public class PlayerDamageCheck : MonoBehaviour
             character.ExplodeCat();
         }
     }
-
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //}
 }

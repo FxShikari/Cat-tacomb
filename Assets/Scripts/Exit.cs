@@ -16,4 +16,10 @@ class Exit : Interactable
         AudioManager.Instance.PlayMusic(2);
         _sceneManager.ChargeScene(_sceneToCharge);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        AudioManager.Instance.PlayMusic(2);
+        _sceneManager.ChargeScene(_sceneToCharge);
+    }
 }
