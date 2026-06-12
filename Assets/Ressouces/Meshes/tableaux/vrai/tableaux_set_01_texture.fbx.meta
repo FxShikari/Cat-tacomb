@@ -3,7 +3,27 @@ guid: 6685322fa725c3143907d7bd21000516
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: degrande
+    second: {fileID: 2100000, guid: 9322f9cebb24c0b4182ef646eec330e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: photo_finale
+    second: {fileID: 2100000, guid: ffafe627e9e313b42a1121624c011005, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 5f4dd96b1bd25d7ce238e145487d4dda
+    second: {fileID: 2800000, guid: e1de4e39127f21848945f83641e05627, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: resurrect-64-1x
+    second: {fileID: 2800000, guid: bc30afb5d7c1fce4486d53b632462fd0, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

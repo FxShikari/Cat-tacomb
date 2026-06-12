@@ -1,0 +1,485 @@
+fileFormatVersion: 2
+guid: 170d413d5e9bb6b499450ef0defe0adc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 768
+        width: 467
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74cefb693252694995097517ed375e5
+      internalID: -1114514311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 768
+        width: 467
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082496d500ec72c409300f51101be1c4
+      internalID: -1016636719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 768
+        width: 467
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d049954620422e44ebaf1cbd4274a836
+      internalID: 77134201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 768
+        width: 467
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171219c3a0dfd99409a99e4c15f325d0
+      internalID: 956675278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 512
+        width: 467
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ae013f7dd372e488aeca5d0ffeb887
+      internalID: 1094999701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 512
+        width: 467
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a4d6ea8b157ca44af496e07f0f6fec
+      internalID: -1174509022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 512
+        width: 467
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd06f6db99947464a95398765e49280d
+      internalID: -610293859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 512
+        width: 467
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aca7a13b600eb646a704cd9cd841381
+      internalID: -630637455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 256
+        width: 467
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831cf93aefec4624a9c66d5e33387faf
+      internalID: 312808919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 256
+        width: 467
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358fdcfe5bee9e84f839c720f74a781a
+      internalID: 1788048750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 256
+        width: 467
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bf29a89b86b7d49bc7138f1c8ac5d5
+      internalID: -790796793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 256
+        width: 467
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e74b8891e6cde04c92fac9e8c2bc7ff
+      internalID: 1460236865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 467
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947404068b98e0c49a7373f0f0054832
+      internalID: -157684721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 467
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e93047c9f84cb46a9c37ded884dbfb
+      internalID: 1843511797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 0
+        width: 467
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd3ae1169baa994fbb6e811a89eac51
+      internalID: -1756430761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit_Rat_Armure_RUN_Sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 0
+        width: 467
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91d44a4395ea524686412e16e940d34
+      internalID: 383704562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 451db736a694f3c45bbdc8e126d84fea
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Petit_Rat_Armure_RUN_Sprite sheet_0: -1114514311
+      Petit_Rat_Armure_RUN_Sprite sheet_1: -1016636719
+      Petit_Rat_Armure_RUN_Sprite sheet_10: -790796793
+      Petit_Rat_Armure_RUN_Sprite sheet_11: 1460236865
+      Petit_Rat_Armure_RUN_Sprite sheet_12: -157684721
+      Petit_Rat_Armure_RUN_Sprite sheet_13: 1843511797
+      Petit_Rat_Armure_RUN_Sprite sheet_14: -1756430761
+      Petit_Rat_Armure_RUN_Sprite sheet_15: 383704562
+      Petit_Rat_Armure_RUN_Sprite sheet_2: 77134201
+      Petit_Rat_Armure_RUN_Sprite sheet_3: 956675278
+      Petit_Rat_Armure_RUN_Sprite sheet_4: 1094999701
+      Petit_Rat_Armure_RUN_Sprite sheet_5: -1174509022
+      Petit_Rat_Armure_RUN_Sprite sheet_6: -610293859
+      Petit_Rat_Armure_RUN_Sprite sheet_7: -630637455
+      Petit_Rat_Armure_RUN_Sprite sheet_8: 312808919
+      Petit_Rat_Armure_RUN_Sprite sheet_9: 1788048750
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
