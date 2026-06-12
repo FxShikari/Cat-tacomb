@@ -357,27 +357,14 @@ public class PlayerCharacter : MonoBehaviour
     {
         if (hit.gameObject.layer == 11)
         {
-            Debug.Log(gameObject.name);
+            //Debug.Log(gameObject.name);
             hit.gameObject.GetComponent<Interactable>().Interation();
         }
 
-        //if (hit.gameObject.CompareTag("DoDamage"))
-        //{
-        //    ExplodeCat();
-        //}
     }
 
     public void ExplodeCat()
     {
         _animator.SetTrigger("Explosion");
-    }
-
-    IEnumerator ExplosionRoutine()
-    {
-        // animation de mort du chat
-        _animator.SetTrigger("Explosion");
-        _canMove = false;
-        yield return new WaitForSeconds(1.5f);
-        ReturnToCheckpoint();
     }
 }
