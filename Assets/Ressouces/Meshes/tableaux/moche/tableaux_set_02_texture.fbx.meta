@@ -3,7 +3,77 @@ guid: 82deefeb5a55e0c4fb3469070179f5ee
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chat_moche_01
+    second: {fileID: 2100000, guid: c7c2bf3a750eb2843982ecc5f2c26330, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chat_moche_02
+    second: {fileID: 2100000, guid: eb2063b42f59b884bb807bb9c1f8c330, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chat_moche_03
+    second: {fileID: 2100000, guid: 6926ae8ecc481a9499e84f295dc72e8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chat_moche_04
+    second: {fileID: 2100000, guid: af89171b2ddcf694e8523045ad9008ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chat_moche_05
+    second: {fileID: 2100000, guid: 2de93595f392ce1429ccd4571e4568e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chat_moche_06
+    second: {fileID: 2100000, guid: 93603e62ab21f0d4ba1bd89d4f76ea7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: degrande
+    second: {fileID: 2100000, guid: 455c3e23578e14f4bbd314c573fa1d49, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 05dcdd0914b6a26ac4ac745d137fcb5c
+    second: {fileID: 2800000, guid: e9d0a335bf9484f48bbc1f3fee0f1976, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 13a21ff4509241e9e143e9d5fc199ad2
+    second: {fileID: 2800000, guid: 527aaa02fb49b2d4783bfcbbc01b31da, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 15110a78c2f1aa1dd322b39ba5689d09
+    second: {fileID: 2800000, guid: 02f44af743882414da1b76cf95652bf7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 50bdea7f2a1309cbef9de15a6dc91bf3
+    second: {fileID: 2800000, guid: 36e18e461a12f2543ab2e174ded778b3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 92dc58c25230779866d6d9c10edd135e
+    second: {fileID: 2800000, guid: 97ab17d2b3cb36346876dbafa338df2d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: b58b72652c997e07adb8aa67d36e510e
+    second: {fileID: 2800000, guid: 96afefbdb332a224eb63447bcc6d6923, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: resurrect-64-1x
+    second: {fileID: 2800000, guid: 85b585a68569f46498e4108bc9c24ce3, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
