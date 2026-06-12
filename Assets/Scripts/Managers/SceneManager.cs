@@ -10,6 +10,7 @@ public class SceneManager : MonoBehaviour
 
     public void StartGame()
     {
+        AudioManager.Instance.PlayMusic(1);
         UnityEngine.SceneManagement.SceneManager.LoadScene("Chateau");
     }
 

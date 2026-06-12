@@ -13,6 +13,7 @@ class Exit : Interactable
 
     public override void Interation()
     {
+        AudioManager.Instance.PlayMusic(2);
         _sceneManager.ChargeScene(_sceneToCharge);
     }
 }

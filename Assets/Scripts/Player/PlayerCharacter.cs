@@ -39,6 +39,8 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private float _wallGravity;
     private float velocity;
 
+    public AudioSource _miaou;
+
 
     private void Start()
     {
@@ -116,7 +118,10 @@ public class PlayerCharacter : MonoBehaviour
 
     }
 
-
+    public void OnMiaou(InputAction.CallbackContext ctx)
+    {
+        _miaou.Play();
+    }
     public void DisableMovement()
     {
         _haveMovement = false;

@@ -8,7 +8,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip _musiCatacomb;
     public AudioSource _audioCatacomb;
     public static AudioManager Instance { get; private set; }
-    [SerializeField] private PlayerCharacter _character;
 
     private void Awake()
     {
