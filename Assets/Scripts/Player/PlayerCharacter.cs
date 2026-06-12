@@ -41,6 +41,8 @@ public class PlayerCharacter : MonoBehaviour
 
     public AudioSource _miaou;
 
+    [SerializeField] bool inGameplay = true;
+
 
     private void Start()
     {
@@ -58,63 +60,68 @@ public class PlayerCharacter : MonoBehaviour
         }
 
 #endif
-        if (_canMove)
+        if (inGameplay)
         {
-            if (_movementInput.x > 0 && !_facingRight)
+
+            if (_canMove)
             {
-                Flip();
+                if (_movementInput.x > 0 && !_facingRight)
+                {
+                    Flip();
+                }
+                else if (_movementInput.x < 0 && _facingRight)
+                {
+                    Flip();
+                }
+                _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
             }
-            else if (_movementInput.x < 0 && _facingRight)
+            else
             {
-                Flip();
+                //_direction = transform.right * _nonPlayerMovementInput + Vector3.zero + transform.up * velocity;
+                _direction = transform.right * _facingDirection + Vector3.zero + transform.up * velocity;
             }
-            _direction = transform.right * _movementInput.x + Vector3.zero + transform.up * velocity;
-        }
-        else
-        {
-            //_direction = transform.right * _nonPlayerMovementInput + Vector3.zero + transform.up * velocity;
-            _direction = transform.right * _facingDirection + Vector3.zero + transform.up * velocity;
-        }
 
 
-        // animation
-        _animator.SetFloat("VelocityJump", velocity);
-        if (_direction.x != 0)
-        {
-            _animator.SetBool("Running", true);
-        }
-        else
-        {
-            _animator.SetBool("Running", false);
+            // animation
+            _animator.SetFloat("VelocityJump", velocity);
+            if (_direction.x != 0)
+            {
+                _animator.SetBool("Running", true);
+            }
+            else
+            {
+                _animator.SetBool("Running", false);
+            }
+
+            _animator.SetBool("Grounded", _characterController.isGrounded);
+
+
+            // Character Control for movement
+            if (_characterController.isGrounded)
+            {
+                _jumpCount = 0;
+                _isWalled = false;
+                _animator.SetBool("Walled", false);
+            }
+            else
+            {
+                BottomCheck();
+            }
+
+            if (_haveMovement)
+            {
+                Movement();
+            }
+
+            // Checking for walls
+            if (_canWallJump)
+            {
+                WallCheck();
+            }
+
+            ApplyGravity();
         }
 
-        _animator.SetBool("Grounded", _characterController.isGrounded);
-
-
-        // Character Control for movement
-        if (_characterController.isGrounded)
-        {
-            _jumpCount = 0;
-            _isWalled = false;
-            _animator.SetBool("Walled", false);
-        }
-        else
-        {
-            BottomCheck();
-        }
-
-        if (_haveMovement)
-        {
-            Movement();
-        }
-
-        // Checking for walls
-        if (_canWallJump)
-        {
-            WallCheck();
-        }
-
-        ApplyGravity();
 
     }
 
@@ -248,25 +255,32 @@ public class PlayerCharacter : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (_isWalled)
+            if (inGameplay)
             {
-                _isWalled = false;
-                Flip();
-                DisablePlayerInput(0.1f);
-                DisableWallJump();
-                velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
+                if (_isWalled)
+                {
+                    _isWalled = false;
+                    Flip();
+                    DisablePlayerInput(0.1f);
+                    DisableWallJump();
+                    velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
 
-                _animator.SetTrigger("Jump");
-                _animator.SetBool("Walled", false);
+                    _animator.SetTrigger("Jump");
+                    _animator.SetBool("Walled", false);
+                }
+                else if (_characterController.isGrounded || _jumpCount < 1)
+                {
+                    _jumpCount++;
+                    velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
+
+                    _animator.SetTrigger("Jump");
+                }
             }
-            else if (_characterController.isGrounded || _jumpCount < 1)
+
+            else
             {
-                _jumpCount++;
-                velocity = Mathf.Sqrt(_jumpPower * -2f * _gravity);
-
-                _animator.SetTrigger("Jump");
+                Interfacemanager.Instance.AfficherMamie();
             }
-
         }
     }
 

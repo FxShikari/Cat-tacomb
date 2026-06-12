@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5b007cdda6ad2f847b85c1331ea6a0c2
+guid: f06f5cb87977c7141a738145d1d22474
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_2840_0
+      name: illu fin 1_0
       rect:
         serializedVersion: 2
-        x: 624
-        y: 133
-        width: 740
-        height: 1334
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d8ad82bbb2aa2e49a8e063d5d0f05f1
-      internalID: -123471427
+      spriteID: 6db93e38b83bbdd4e8efc855ef07bf54
+      internalID: 1836032429
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e9cb3cdad0b6b63468e55ae39ebb2fd4
+    spriteID: a1d22658b4683cb4c80281a982ea6a7b
     internalID: 0
     vertices: []
     indices: 
@@ -132,7 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_2840_0: -123471427
+      illu fin 1_0: 1836032429
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -4,22 +4,35 @@ using UnityEngine.UI;
 
 public class Interfacemanager : MonoBehaviour
 {
-    public string[] _listeTexte;
-    public TextMeshProUGUI leText;
-    public Image _lazoneDeTexte;
-    int indexImage = 0;
+    public static Interfacemanager Instance { get; private set; }
 
-    public Image _illustrationMamie;
-
-    public void NextImage()
+    private void Awake()
     {
-        leText.text = _listeTexte[indexImage];
-        indexImage ++;
+        // If there is an instance, and it's not me, delete myself.
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
-    public void EnableZoneText()
+    public Image _lazoneDeTexte;
+    int indexImage = -1;
+
+    public Image[] _illustrations;
+
+    public void AfficherMamie()
     {
-        leText.gameObject.SetActive(true);
+        if (indexImage > 0)
+        {
+            _illustrations[indexImage - 1].gameObject.SetActive(false);
+        }
+        indexImage++;
+        _illustrations[indexImage].gameObject.SetActive(true);
     }
 
 }
