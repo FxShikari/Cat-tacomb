@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour, IAttackable
 {
     [SerializeField] CharacterController _characterController;
 
+    [SerializeField] Animator _animator;
     [SerializeField] private float _speed;
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private Transform _wallCheck;
@@ -45,8 +46,10 @@ public class Enemy : MonoBehaviour, IAttackable
     IEnumerator StunLockRoutine()
     {
         _stunLocked = true;
+        _animator.SetBool("Stun", true);
         yield return new WaitForSeconds(1.5f);
         _stunLocked = false;
+        _animator.SetBool("Stun", false);
     }
 
     void GroundCheck()
