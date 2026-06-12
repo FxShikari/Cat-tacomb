@@ -22,8 +22,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
+      name: krita tableau final (2)
+    second: {fileID: 2800000, guid: 7733c702a738f5043898b881c2bdab2a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
       name: resurrect-64-1x
-    second: {fileID: 2800000, guid: bc30afb5d7c1fce4486d53b632462fd0, type: 3}
+    second: {fileID: 2800000, guid: 929e27cc0fa2eb04ab289d2ec58d4cda, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
