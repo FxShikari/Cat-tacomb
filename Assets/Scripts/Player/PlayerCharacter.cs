@@ -250,6 +250,12 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
+    public void OutOfGameplay()
+    {
+        _animator.SetBool("Running", false);
+        inGameplay = false;
+    }
+
     //Juuuuuump
     public void OnJump(InputAction.CallbackContext ctx)
     {
